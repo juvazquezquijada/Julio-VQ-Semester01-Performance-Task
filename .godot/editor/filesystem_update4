@@ -1,1 +1,3 @@
 res://world.tscn
+res://assets/scene/PLAYER.tscn
+res://assets/scene/PLAYER.gd
