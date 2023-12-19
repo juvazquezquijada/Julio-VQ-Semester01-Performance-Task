@@ -21,3 +21,9 @@ func _process(velocity):
 		velocity.x += 1
 		sprite.scale.x = -1
 	position += velocity * speed
+
+
+func _on_body_entered(body):
+	hide()
+	
+	
