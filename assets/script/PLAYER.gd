@@ -36,3 +36,7 @@ func _on_body_entered(body):
 	bg_music.stop()
 	enemy_hit.play()
 	game_over.show()
+
+
+func _on_button_pressed():
+	get_tree().reload_current_scene()
