@@ -3,6 +3,9 @@ extends Area2D
 @export var speed = 5
 # Called when the node enters the scene tree for the first time.
 @onready var sprite = $Sprite2D
+@onready var bg_music = $"../BackgroundMusic"
+@onready var enemy_hit = $"../EnemyHitSound"
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(velocity):
 	velocity = Vector2.ZERO
@@ -25,5 +28,5 @@ func _process(velocity):
 
 func _on_body_entered(body):
 	hide()
-	
-	
+	bg_music.stop()
+	enemy_hit.play()
