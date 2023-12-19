@@ -5,8 +5,13 @@ extends Area2D
 @onready var sprite = $Sprite2D
 @onready var bg_music = $"../BackgroundMusic"
 @onready var enemy_hit = $"../EnemyHitSound"
-
+@onready var game_over = $"../You died text"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+
+func _onready():
+	game_over.hide()
+
+
 func _process(velocity):
 	velocity = Vector2.ZERO
 	
@@ -30,3 +35,4 @@ func _on_body_entered(body):
 	hide()
 	bg_music.stop()
 	enemy_hit.play()
+	game_over.show()
